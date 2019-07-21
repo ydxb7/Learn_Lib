@@ -1,0 +1,26 @@
+buildscript {
+
+    repositories {
+        google()
+        jcenter()
+    }
+
+    // It is normally good practise to specify the exact version. We use '+' to ensure that
+    // the project always compile with the latest version of Realm Java
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.1'
+        classpath "io.realm:realm-gradle-plugin:+"
+        classpath 'ch.netzwerg:gradle-release-plugin:1.2.0'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
